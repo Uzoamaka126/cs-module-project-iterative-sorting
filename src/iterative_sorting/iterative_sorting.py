@@ -18,11 +18,21 @@ def selection_sort(arr):
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
     # Your code here
-
-
+    # loop through the array as many times as possible
+    for item in range(len(arr)-1, 0, -1):
+        for j in range(item):
+            if arr[j] > arr[j+1]:
+                temp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j + 1] = temp
     return arr
-
+                
+our_list = [19, 13, 6, 2, 18, 8]
+bubble_sort(our_list)
+print(our_list)
 '''
+
+
 STRETCH: implement the Counting Sort function below
 
 Counting sort is a sorting algorithm that works on a set of data where
